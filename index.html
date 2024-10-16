@@ -1,3 +1,107 @@
 <!DOCTYPE html>
-<script>window.location.replace("https://www.mrc-bsu.cam.ac.uk/tackling-covid-19/nowcasting-and-forecasting-of-covid-19/");</script>
-For the latest results please visit <a href="https://www.mrc-bsu.cam.ac.uk/tackling-covid-19/nowcasting-and-forecasting-of-covid-19/">the MRC Biostatistics Unit website.</a>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="libs/jquery-3.6.0/jquery-3.6.0.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: "Open Sans", Helvetica, Arial, sans-serif;
+        }
+
+        h1,
+        h4 {
+            font-weight: 400;
+        }
+
+        h3 {
+            font-weight: 600;
+        }
+
+        .report-item {
+            flex: 1 0 6.25%;
+            margin: 5px;
+
+        }
+
+        .report-link {
+            text-decoration: none;
+            color: black;
+
+            padding: 3px;
+        }
+
+        .report-link:hover {
+            background-color: lightblue;
+            text-decoration: underline;
+        }
+
+        .report-link:visited {
+            color: darkgreen;
+        }
+
+        #reports {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-right: auto;
+        }
+
+        .home-content {
+            margin: 0 auto;
+            width: 80%;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            var availableReports = ['20200506.html', '20200510.html', '20200603.html', '20200619.html', '20200626.html', '20200629.html', '20200703.html', '20200710.html', '20200724.html', '20200731.html', '20201012.html', '20201020.html', '20201028.html', '20201103.html', '20201111.html', '20201119.html', '20201126.html', '20201211.html', '20201221.html', '20210114.html', '20210129.html', '20210212.html', '20210401.html', '20210430.html', '20210511.html', '20210512.html', '20210527.html', '20210614.html', '20210625.html', '20210715.html', '20210805.html', '20210820.html', '20210902.html', '20210907.html', '20210916.html', '20210922.html', '20210929.html', '20211020.html', '20211029.html', '20211105.html', '20211111.html', '20211118.html', '20211125.html', '20211202.html', '20211209.html', '20211222.html', '20220225.html', '20220429.html', '20220623.html', '20220708.html', '20220715.html', '20220805.html', '20221121.html', '20221213.html'];
+            var listItems = [];
+            var reportsList = $("#reports");
+            for (i in availableReports) {
+                var listItemText = availableReports[i].replace(".html", "")
+                var newItem = `<span class="report-item"><a class="report-link" href=${availableReports[i]}>${listItemText}</a></span>`
+                console.log(newItem)
+                listItems.push(newItem)
+            }
+            reportsList.append(listItems.join(""));
+        })
+
+    </script>
+</head>
+
+<body>
+
+    <div class="home-content">
+        <h1>Covid-19: Nowcasting and Forecasting</h1>
+        <h4>Paul Birrell, Joshua Blake, Edwin van Leeuwen, MRC Biostatistics Unit COVID-19 Working Group, Daniela De
+            Angelis.</h4>
+        <p>
+            Real-time tracking of an epidemic, as data accumulate over time, is an essential component of a public
+            health
+            response to a new outbreak. A team of statistical modellers at the MRC Biostatistics Unit (BSU), University
+            of
+            Cambridge, are working to provide regular now-casts and forecasts of COVID-19 infections and deaths. This
+            information feeds directly to the SAGE sub-group, Scientific Pandemic Influenza sub-group on Modelling
+            (SPI-M),
+            and to regional Public Health England (PHE) teams.
+        </p>
+
+        <h3>Please find the available report outputs below, listed in ascending chronological order.</h3>
+
+        <div id="reports">
+            <!-- items are injected via the script above -->
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
