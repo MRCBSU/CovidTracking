@@ -40,3 +40,12 @@ vignettes/*.pdf
 
 *.swp
 draft-pub.html
+
+#clutter
+BSU_website_plots/
+create_figs.md
+generate.R
+plots.R
+process_model_runsprocess_model_runs_20201206_1.err
+process_model_runs_20201206_1.out
+submit_generate
