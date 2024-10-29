@@ -46,6 +46,8 @@ BSU_website_plots/
 create_figs.md
 generate.R
 plots.R
-process_model_runsprocess_model_runs_20201206_1.err
+process_model_runs_20201206_1.err
 process_model_runs_20201206_1.out
 submit_generate
+.DS_Store
+Covid_Web_App_To_Do_List.txt
